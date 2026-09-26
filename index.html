@@ -34,7 +34,8 @@
 <main id="top">
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
     <div class="shape shape-hero-1" data-parallax="0.15" aria-hidden="true"></div>
     <div class="shape shape-hero-2" data-parallax="0.08" aria-hidden="true"></div>
     <div class="hero-inner" data-reveal>
@@ -58,42 +59,42 @@
       <h2>Powerful underneath.<br>Simple on the surface.</h2>
     </div>
     <div class="why-grid">
-      <div class="why-card" data-reveal>
+      <div class="why-card tilt" data-reveal>
         <div class="why-icon" aria-hidden="true">
           <svg viewBox="0 0 40 40" width="28" height="28" fill="none"><path d="M20 4l14 8v16l-14 8-14-8V12l14-8z" stroke="#0A1930" stroke-width="2.5"/><circle cx="20" cy="20" r="5" fill="#0A1930"/></svg>
         </div>
         <h3>Human-first design</h3>
         <p>Every product starts from how people actually work, not how the technology happens to function.</p>
       </div>
-      <div class="why-card" data-reveal>
+      <div class="why-card tilt" data-reveal>
         <div class="why-icon" aria-hidden="true">
           <svg viewBox="0 0 40 40" width="28" height="28" fill="none"><rect x="6" y="6" width="28" height="28" rx="6" stroke="#0A1930" stroke-width="2.5"/><path d="M14 20l4 4 8-8" stroke="#0A1930" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h3>Built for real use</h3>
         <p>Shipped, working software &mdash; not vaporware. Video Editor and Media Player are live today.</p>
       </div>
-      <div class="why-card" data-reveal>
+      <div class="why-card tilt" data-reveal>
         <div class="why-icon" aria-hidden="true">
           <svg viewBox="0 0 40 40" width="28" height="28" fill="none"><path d="M20 4v32M8 12l24 16M32 12L8 28" stroke="#0A1930" stroke-width="2.5" stroke-linecap="round"/></svg>
         </div>
         <h3>AI woven throughout</h3>
         <p>Intelligent capability isn't bolted on &mdash; it's a layer across search, automation, assistance and analysis.</p>
       </div>
-      <div class="why-card" data-reveal>
+      <div class="why-card tilt" data-reveal>
         <div class="why-icon" aria-hidden="true">
           <svg viewBox="0 0 40 40" width="28" height="28" fill="none"><circle cx="20" cy="20" r="14" stroke="#0A1930" stroke-width="2.5"/><path d="M20 12v8l6 4" stroke="#0A1930" stroke-width="2.5" stroke-linecap="round"/></svg>
         </div>
         <h3>Fast, focused execution</h3>
         <p>A lean team that ships often and iterates quickly rather than shipping once a year.</p>
       </div>
-      <div class="why-card" data-reveal>
+      <div class="why-card tilt" data-reveal>
         <div class="why-icon" aria-hidden="true">
           <svg viewBox="0 0 40 40" width="28" height="28" fill="none"><rect x="8" y="4" width="24" height="32" rx="4" stroke="#0A1930" stroke-width="2.5"/><line x1="14" y1="14" x2="26" y2="14" stroke="#0A1930" stroke-width="2.5"/><line x1="14" y1="21" x2="26" y2="21" stroke="#0A1930" stroke-width="2.5"/></svg>
         </div>
         <h3>Cross-platform by default</h3>
         <p>Windows, Android and iOS &mdash; the same product philosophy everywhere people work.</p>
       </div>
-      <div class="why-card" data-reveal>
+      <div class="why-card tilt" data-reveal>
         <div class="why-icon" aria-hidden="true">
           <svg viewBox="0 0 40 40" width="28" height="28" fill="none"><path d="M20 4c8 0 14 6 14 14s-6 14-14 14S6 26 6 18 12 4 20 4z" stroke="#0A1930" stroke-width="2.5"/><path d="M20 12v6l5 3" stroke="#0A1930" stroke-width="2.5" stroke-linecap="round"/></svg>
         </div>
@@ -133,7 +134,7 @@
     </div>
 
     <div class="feature-row" data-reveal>
-      <div class="feature-visual" aria-hidden="true">
+      <div class="feature-visual tilt" aria-hidden="true">
         <div class="shape shape-blob shape-blob-a"></div>
         <svg viewBox="0 0 64 64" width="72" height="72" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="6" y="14" width="52" height="36" rx="6" stroke="#0A1930" stroke-width="3"/>
@@ -154,7 +155,7 @@
     </div>
 
     <div class="feature-row feature-row-reverse" data-reveal>
-      <div class="feature-visual" aria-hidden="true">
+      <div class="feature-visual tilt" aria-hidden="true">
         <div class="shape shape-blob shape-blob-b"></div>
         <svg viewBox="0 0 64 64" width="72" height="72" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="32" cy="32" r="26" stroke="#0A1930" stroke-width="3"/>
@@ -175,7 +176,7 @@
     </div>
 
     <div class="feature-row" data-reveal>
-      <div class="feature-visual" aria-hidden="true">
+      <div class="feature-visual tilt" aria-hidden="true">
         <div class="shape shape-blob shape-blob-a"></div>
         <img src="pageforge-icon.png" alt="" width="72" height="72" style="border-radius:16px;">
       </div>
@@ -200,22 +201,22 @@
       <h2>One company. Four kinds of intelligent software.</h2>
     </div>
     <div class="portfolio-grid">
-      <div class="card" data-reveal>
+      <div class="card tilt" data-reveal>
         <span class="card-tag">Consumer &amp; Creative</span>
         <h3>Media Player &middot; Video Editor &middot; PDF Viewer/Editor</h3>
         <p>Everyday tools for watching, editing and creating &mdash; simple on the surface.</p>
       </div>
-      <div class="card" data-reveal>
+      <div class="card tilt" data-reveal>
         <span class="card-tag">Engineering</span>
         <h3>Oil &amp; Gas Engineering &middot; Well/Log Analysis</h3>
         <p>Technical tools for professionals solving complex challenges.</p>
       </div>
-      <div class="card" data-reveal>
+      <div class="card tilt" data-reveal>
         <span class="card-tag">Utilities</span>
         <h3>Windows &middot; Android &middot; iOS</h3>
         <p>Productivity applications across every platform people work on.</p>
       </div>
-      <div class="card" data-reveal>
+      <div class="card tilt" data-reveal>
         <span class="card-tag">AI Layer</span>
         <h3>Search &middot; Automation &middot; Assistance &middot; Analysis</h3>
         <p>Intelligent capability woven across every LiVi product.</p>
@@ -233,7 +234,7 @@
     <div class="book-series" data-reveal>
       <h3 class="book-series-title">The Sustainable Maintainer Series</h3>
       <div class="book-grid">
-        <a class="book-card" href="https://www.amazon.in/Building-Monetizing-Open-Source-Software-Project-ebook/dp/B0HK88D9ZH/ref=sr_1_1?crid=2FR59SK9J3WGJ&dib=eyJ2IjoiMSJ9.aXsiEBograkzm9ZeAcrOdQ.oMA7mE-0GwOGwFuECxE-WUI775G-EGIMa_24jkUzRy4&dib_tag=se&keywords=Building+and+Monetizing+and+Open-Source+Software+Project%3A+From+Struggling+Maintainer+to+AI-Powered+Builder+and+Monetization+Expert&nsdOptOutParam=true&qid=1790270471&sprefix=building+and+monetizing+and+open-source+software+project+from+struggling+maintainer+to+ai-powered+builder+and+monetization+expert%2Caps%2C317&sr=8-1" target="_blank" rel="noopener">
+        <a class="book-card tilt" href="https://www.amazon.in/Building-Monetizing-Open-Source-Software-Project-ebook/dp/B0HK88D9ZH/ref=sr_1_1?crid=2FR59SK9J3WGJ&dib=eyJ2IjoiMSJ9.aXsiEBograkzm9ZeAcrOdQ.oMA7mE-0GwOGwFuECxE-WUI775G-EGIMa_24jkUzRy4&dib_tag=se&keywords=Building+and+Monetizing+and+Open-Source+Software+Project%3A+From+Struggling+Maintainer+to+AI-Powered+Builder+and+Monetization+Expert&nsdOptOutParam=true&qid=1790270471&sprefix=building+and+monetizing+and+open-source+software+project+from+struggling+maintainer+to+ai-powered+builder+and+monetization+expert%2Caps%2C317&sr=8-1" target="_blank" rel="noopener">
           <div class="book-cover">
             <img src="covers/book1-cover.jpg" alt="Building and Monetizing an Open-Source Software Project book cover">
           </div>
@@ -244,7 +245,7 @@
             <span class="book-link">View on Amazon &rarr;</span>
           </div>
         </a>
-        <a class="book-card" href="https://www.amazon.in/s?k=The+100-Day+Launch+Roadmap%3A+A+Day-by-Day+Plan+to+Turn+Your+Open-Source+Project+Into+a+Paid+Offering&crid=2INC9SM9T9LYC&sprefix=the+100-day+launch+roadmap+a+day-by-day+plan+to+turn+your+open-source+project+into+a+paid+offering%2Caps%2C334&ref=nb_sb_noss" target="_blank" rel="noopener">
+        <a class="book-card tilt" href="https://www.amazon.in/s?k=The+100-Day+Launch+Roadmap%3A+A+Day-by-Day+Plan+to+Turn+Your+Open-Source+Project+Into+a+Paid+Offering&crid=2INC9SM9T9LYC&sprefix=the+100-day+launch+roadmap+a+day-by-day+plan+to+turn+your+open-source+project+into+a+paid+offering%2Caps%2C334&ref=nb_sb_noss" target="_blank" rel="noopener">
           <div class="book-cover">
             <img src="covers/book2-cover.jpg" alt="The 100-Day Launch Roadmap book cover">
           </div>
@@ -261,7 +262,7 @@
     <div class="book-series" data-reveal>
       <h3 class="book-series-title">The Practical AI Builder Series</h3>
       <div class="book-grid">
-        <a class="book-card" href="https://www.amazon.in/dp/B0HKJ115XV/ref=sr_1_1?crid=3DC2MXV09E5DO&dib=eyJ2IjoiMSJ9.dx2trz9CR6Az8SBWo0dl_EhCK35dawAVVGaxcJL0GrcUizPHv6goNoBf38M23h_C4r48uGPyapWxJXeSd0Tc94iHp3G8EdTyDVB-s1mQErmuagBIZZtQmuf_7SiG-ZaMa2SAmDFwq-9AkQZSSOuJls7Hzlie0L_9KM8vcnnuzrLm5d2fDq9PrDxKCm7Luv1CedLRGJMlq-esAQFkdMu0nFx73g564_aFB13xnvOxVmY.55kyjvNuE-bbsA8AfbcLnzKoUosIU0SHA31OAznbruM&dib_tag=se&keywords=Build+Your+First+App+with+AI%3A+A+Beginner%27s+Guide+to+creating+Real+Software+with+Claude+Code&nsdOptOutParam=true&qid=1790271863&sprefix=build+your+first+app+with+ai+a+beginner%27s+guide+to+creating+real+software+with+claude+code%2Caps%2C273&sr=8-1" target="_blank" rel="noopener">
+        <a class="book-card tilt" href="https://www.amazon.in/dp/B0HKJ115XV/ref=sr_1_1?crid=3DC2MXV09E5DO&dib=eyJ2IjoiMSJ9.dx2trz9CR6Az8SBWo0dl_EhCK35dawAVVGaxcJL0GrcUizPHv6goNoBf38M23h_C4r48uGPyapWxJXeSd0Tc94iHp3G8EdTyDVB-s1mQErmuagBIZZtQmuf_7SiG-ZaMa2SAmDFwq-9AkQZSSOuJls7Hzlie0L_9KM8vcnnuzrLm5d2fDq9PrDxKCm7Luv1CedLRGJMlq-esAQFkdMu0nFx73g564_aFB13xnvOxVmY.55kyjvNuE-bbsA8AfbcLnzKoUosIU0SHA31OAznbruM&dib_tag=se&keywords=Build+Your+First+App+with+AI%3A+A+Beginner%27s+Guide+to+creating+Real+Software+with+Claude+Code&nsdOptOutParam=true&qid=1790271863&sprefix=build+your+first+app+with+ai+a+beginner%27s+guide+to+creating+real+software+with+claude+code%2Caps%2C273&sr=8-1" target="_blank" rel="noopener">
           <div class="book-cover">
             <img src="covers/ai1-cover.jpg" alt="Build Your First App with AI book cover">
           </div>
@@ -272,7 +273,7 @@
             <span class="book-link">View on Amazon &rarr;</span>
           </div>
         </a>
-        <a class="book-card" href="https://www.amazon.in/dp/B0HKT3GQHQ/ref=sr_1_1?crid=VYVY4XIRSJTM&dib=eyJ2IjoiMSJ9.7xQN7Yazdom4dJnuo5PxLw.hX67GxwKaM1eHWXD87UjqbQs0zVMD01D4Kca69kT9Tk&dib_tag=se&keywords=AI+%26+LOGIC+WITHOUT+SCREENS%3A+Hands-On+Activities+for+Understanding+How+AI+Learns%2C+Predicts+and+Supports+Decisions&nsdOptOutParam=true&qid=1790270606&sprefix=ai+%26+logic+without+screens+hands-on+activities+for+understanding+how+ai+learns%2C+predicts+and+supports+decisions%2Caps%2C269&sr=8-1" target="_blank" rel="noopener">
+        <a class="book-card tilt" href="https://www.amazon.in/dp/B0HKT3GQHQ/ref=sr_1_1?crid=VYVY4XIRSJTM&dib=eyJ2IjoiMSJ9.7xQN7Yazdom4dJnuo5PxLw.hX67GxwKaM1eHWXD87UjqbQs0zVMD01D4Kca69kT9Tk&dib_tag=se&keywords=AI+%26+LOGIC+WITHOUT+SCREENS%3A+Hands-On+Activities+for+Understanding+How+AI+Learns%2C+Predicts+and+Supports+Decisions&nsdOptOutParam=true&qid=1790270606&sprefix=ai+%26+logic+without+screens+hands-on+activities+for+understanding+how+ai+learns%2C+predicts+and+supports+decisions%2Caps%2C269&sr=8-1" target="_blank" rel="noopener">
           <div class="book-cover">
             <img src="covers/ai2-cover.jpg" alt="AI and Logic Without Screens book cover">
           </div>
@@ -372,5 +373,6 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="hero3d.js"></script>
 </body>
 </html>
