@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PageForge: free PDF app for Windows</title>
+<meta name="description" content="PageForge is a free, open-source PDF app for Windows: read, annotate, fill, sign, organize and redact PDFs, with OCR. Everything runs on your computer.">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+  :root {
+    --bg: #f7f8fa; --card: #ffffff; --text: #1b2330; --muted: #5a6577; --line: #dde2ea;
+    --accent: #1f64ba; --accent-text: #ffffff; --warn-bg: #fff6e0; --warn-line: #e6c879; --code: #eef1f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #11151c; --card: #1a202b; --text: #e8ecf3; --muted: #9aa6b9; --line: #2b3444;
+      --accent: #6aa6f0; --accent-text: #0d1117; --warn-bg: #2b2412; --warn-line: #6b5a22; --code: #232b39;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { display: flex; gap: 16px; align-items: center; margin-bottom: 8px; }
+  header img { width: 72px; height: 72px; border-radius: 16px; }
+  h1 { font-size: 2rem; margin: 0; line-height: 1.2; }
+  .tag { color: var(--muted); margin: 0; }
+  h2 { font-size: 1.25rem; margin: 40px 0 12px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin: 12px 0; }
+  .card h3 { margin: 0 0 4px; font-size: 1.05rem; }
+  .card p { margin: 4px 0 12px; color: var(--muted); }
+  .btn { display: inline-block; background: var(--accent); color: var(--accent-text); text-decoration: none; font-weight: 600; padding: 10px 18px; border-radius: 8px; }
+  .btn:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .size { color: var(--muted); font-size: .9rem; margin-left: 8px; }
+  .warn { background: var(--warn-bg); border: 1px solid var(--warn-line); border-radius: 12px; padding: 14px 18px; margin: 20px 0; }
+  .warn p { margin: 4px 0; }
+  code, pre { background: var(--code); border-radius: 6px; font: .9rem/1.5 ui-monospace, Consolas, monospace; }
+  code { padding: 1px 5px; word-break: break-all; }
+  pre { padding: 12px 14px; overflow-x: auto; margin: 8px 0; }
+  ol, ul { padding-left: 1.3rem; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+  table { border-collapse: collapse; width: 100%; font-size: .85rem; }
+  td, th { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td:last-child { word-break: break-all; font-family: ui-monospace, Consolas, monospace; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="pageforge-icon.png" alt="PageForge icon" width="72" height="72">
+    <div>
+      <h1>PageForge</h1>
+      <p class="tag">A free, open-source PDF app for Windows. Version 0.13.0</p>
+    </div>
+  </header>
+
+  <p>Read, annotate, fill in, sign, organize, compare and redact PDFs, with text recognition (OCR) for scanned
+  pages. Your documents stay on your computer: PageForge does not upload them. The only network use is the
+  optional <em>Help ▸ Check for updates</em> command, which asks GitHub for the latest release when you choose it.</p>
+
+  <h2>Download</h2>
+  <p>For Windows 10 or 11, 64-bit.</p>
+
+  <div class="card">
+    <h3>Installer (MSI)</h3>
+    <p>Installs for all users and needs administrator rights. Adds Start menu entries and, if you wish, "Edit with PageForge" to the right-click menu.</p>
+    <a class="btn" href="https://github.com/sarayunova/PageForge-rs/releases/download/v0.13.0/pdfcraft-0.13.0-windows-x64.msi">Download the installer</a><span class="size">46 MB</span>
+  </div>
+
+  <div class="card">
+    <h3>Portable zip</h3>
+    <p>No installation: unzip into a folder and run <code>pageforge.exe</code>. Settings stay in a folder beside the program.</p>
+    <a class="btn" href="https://github.com/sarayunova/PageForge-rs/releases/download/v0.13.0/pdfcraft-0.13.0-windows-x64-portable.zip">Download the portable zip</a><span class="size">56 MB</span>
+  </div>
+
+  <p>The file names start with <code>pdfcraft-</code> because the program is built from PdfCraft; the app inside is PageForge.</p>
+
+  <div class="warn" role="note">
+    <p><strong>Not code-signed yet.</strong> We have applied for a signing certificate. Until it arrives, Windows
+    SmartScreen will show "Windows protected your PC" the first time you run these files. That is expected for
+    unsigned programs. Check the checksum below, then choose <strong>More info</strong>, then <strong>Run anyway</strong>.</p>
+  </div>
+
+  <h2>How to install</h2>
+  <h3>With the installer</h3>
+  <ol>
+    <li>Download the <code>.msi</code> file and check its checksum (below).</li>
+    <li>Double-click it. If SmartScreen appears, choose <strong>More info</strong>, then <strong>Run anyway</strong>. Answer Yes to the administrator prompt.</li>
+    <li>Follow the wizard, then start PageForge from the Start menu.</li>
+    <li>To make it your default PDF app: Settings ▸ Apps ▸ Default apps. The installer never changes your default by itself.</li>
+  </ol>
+  <p>To remove it: Settings ▸ Apps ▸ Installed apps ▸ PageForge ▸ Uninstall.</p>
+
+  <h3>With the portable zip</h3>
+  <ol>
+    <li>Right-click the zip, choose <strong>Extract All…</strong>, and pick a folder you own, such as <code>C:\Tools\PageForge</code>. Don't run it from inside the zip.</li>
+    <li>If the program won't start, right-click the zip before extracting, open <strong>Properties</strong>, tick <strong>Unblock</strong>, press OK, and extract again.</li>
+    <li>Run <code>pageforge.exe</code>. To remove it, delete the folder.</li>
+  </ol>
+
+  <h2>Check your download</h2>
+  <p>In PowerShell, in the folder you downloaded to:</p>
+  <pre>Get-FileHash .\pdfcraft-0.13.0-windows-x64.msi -Algorithm SHA256</pre>
+  <p>The result must match the SHA-256 below. If it doesn't, delete the file and download it again.</p>
+  <table>
+    <tr><th>File</th><th>SHA-256</th></tr>
+    <tr><td>pdfcraft-0.13.0-windows-x64.msi</td><td>7bc709c525d4d2048fdc692055ebc562d9a0c375408e4b5bb494114b4c6089c4</td></tr>
+    <tr><td>pdfcraft-0.13.0-windows-x64-portable.zip</td><td>cb80a67824d32b8245406f4977dc6027c7d87079da85c7f05a0035aaaf50f236</td></tr>
+  </table>
+  <p>The same list is in <a href="https://github.com/sarayunova/PageForge-rs/releases/download/v0.13.0/SHA256SUMS.txt">SHA256SUMS.txt</a>. Full instructions:
+  <a href="https://github.com/sarayunova/PageForge-rs/blob/main/docs/install-windows.md">install guide</a>.</p>
+
+  <h2>Source, licence and help</h2>
+  <ul>
+    <li>Source code and releases: <a href="https://github.com/sarayunova/PageForge-rs">github.com/sarayunova/PageForge-rs</a></li>
+    <li>Report a problem: <a href="https://github.com/sarayunova/PageForge-rs/issues">GitHub issues</a></li>
+    <li>Licence: MIT or Apache-2.0, at your option.</li>
+    <li>Not yet built or tested: Linux and macOS packages.</li>
+  </ul>
+
+  <footer>
+    <p>PageForge is published by LiVi Software Company. It is based on
+    <a href="https://github.com/storytold/pdfcraft">PdfCraft</a> by the ArtCraft Team and the PdfCraft contributors, used under the MIT or Apache-2.0 licence.
+    PageForge is not affiliated with or endorsed by them or by Adobe.</p>
+  </footer>
+</main>
+</body>
+</html>
