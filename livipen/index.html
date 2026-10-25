@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livi Pen: free vector illustration app</title>
+<meta name="description" content="Livi Pen is a free, open-source vector illustration app for Windows, macOS, Linux and FreeBSD: draw and edit paths, combine shapes, style, type and export to SVG, PDF and EPS.">
+<link rel="icon" type="image/png" href="../livipen-icon.png">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .pf { max-width: 820px; margin: 0 auto; padding: 56px 20px 72px; }
+  .pf-head { display: flex; gap: 20px; align-items: center; margin-bottom: 20px; }
+  .pf-head img { width: 84px; height: 84px; border-radius: 20px; }
+  .pf h1 { font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.15; }
+  .pf .tag { color: var(--text-soft); margin: 6px 0 0; }
+  .pf h2 { font-size: 1.5rem; margin: 48px 0 14px; }
+  .pf h3 { font-size: 1.1rem; margin: 22px 0 6px; }
+  .pf p, .pf li { color: var(--text-soft); line-height: 1.7; }
+  .pf a:not(.btn) { color: var(--lime); text-decoration: underline; }
+  .pf strong { color: var(--ink); }
+  .pf .card { background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; margin: 16px 0; }
+  .pf .card h3 { margin: 0 0 4px; color: var(--ink); }
+  .pf .card p { margin: 4px 0 16px; }
+  .pf .card .btn { margin: 0 8px 8px 0; }
+  .pf .size { color: var(--text-soft); font-size: .9rem; margin-left: 12px; }
+  .pf .warn { background: var(--bg-panel-alt); border: 1px solid var(--lime-deep); border-radius: var(--radius); padding: 16px 22px; margin: 24px 0; }
+  .pf .warn p { margin: 4px 0; }
+  .pf code, .pf pre { background: var(--bg-panel-alt); color: var(--ink); border-radius: 8px; font: .9rem/1.5 ui-monospace, Consolas, monospace; }
+  .pf code { padding: 1px 6px; word-break: break-all; }
+  .pf pre { padding: 12px 16px; overflow-x: auto; margin: 10px 0; }
+  .pf ol, .pf ul { padding-left: 1.3rem; }
+  .pf table { border-collapse: collapse; width: 100%; font-size: .85rem; }
+  .pf td, .pf th { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--text-soft); }
+  .pf th { color: var(--ink); }
+  .pf td:last-child { word-break: break-all; font-family: ui-monospace, Consolas, monospace; }
+  .pf-credit { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line); font-size: .9rem; }
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="../" class="brand">
+      <div class="brand-logo-crop">
+        <img src="../logo.png" alt="LiVi Software logo" class="brand-logo">
+      </div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../#why">Why LiVi</a>
+      <a href="../#featured">Products</a>
+      <a href="../#services">What we build</a>
+      <a href="../#books">Books</a>
+      <a href="../#philosophy">Philosophy</a>
+      <a href="../#contact" class="btn btn-primary">Let's talk</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header><main class="pf">
+  <div class="pf-head">
+    <img src="../livipen-icon.png" alt="Livi Pen icon" width="72" height="72">
+    <div>
+      <h1>Livi Pen</h1>
+      <p class="tag">A free, open-source vector illustration app. Version 0.16.0 (alpha)</p>
+    </div>
+  </div>
+
+  <p>Draw and edit paths with the pen, pencil and shape tools, combine shapes with Pathfinder, style them with
+  fills, strokes, gradients and effects, set type, and lay out artboards. Livi Pen opens and saves SVG, PDF and
+  EPS, exports PNG and more, and prints. It runs on your computer and does not upload your files.</p>
+  <p>Livi Pen is in <strong>alpha</strong>: the main workflows work from start to finish, but expect rough edges.</p>
+
+  <h2>Download</h2>
+
+  <div class="card">
+    <h3>Windows 10 or 11</h3>
+    <p>The installer (MSI) adds Start menu entries and needs administrator rights. The portable zip needs no
+    installation: unzip it into a folder and run <code>livipen.exe</code>. Most PCs need the 64-bit (x64) version.</p>
+    <a class="btn btn-primary" href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-windows-x64.msi">Installer, 64-bit</a><span class="size">107 MB</span><br>
+    <a class="btn btn-primary" href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-windows-x64-portable.zip">Portable zip, 64-bit</a><span class="size">132 MB</span>
+    <p>Other Windows builds:
+    <a href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-windows-arm64.msi">ARM installer</a> (100 MB),
+    <a href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-windows-arm64-portable.zip">ARM portable</a> (126 MB),
+    <a href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-windows-x86.msi">32-bit installer</a> (104 MB),
+    <a href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-windows-x86-portable.zip">32-bit portable</a> (127 MB).</p>
+  </div>
+
+  <div class="card">
+    <h3>macOS 11 or later</h3>
+    <p>One download for Apple silicon and Intel Macs. Open the disk image and drag Livi Pen to Applications.</p>
+    <a class="btn btn-primary" href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-macos-universal.dmg">Download for Mac</a><span class="size">145 MB</span>
+  </div>
+
+  <div class="card">
+    <h3>Linux</h3>
+    <p>The AppImage runs on most distributions without installing: make it executable and run it. Packages for
+    Debian and Ubuntu (.deb), Fedora and openSUSE (.rpm) and Flatpak are below.</p>
+    <a class="btn btn-primary" href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-linux-x86_64.AppImage">AppImage, x86_64</a><span class="size">122 MB</span>
+    <p>x86_64:
+    <a href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-linux-x86_64.deb">.deb</a>,
+    <a href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-linux-x86_64.rpm">.rpm</a>,
+    <a href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-linux-x86_64.flatpak">.flatpak</a>,
+    <a href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-linux-x86_64.tar.gz">.tar.gz</a>.
+    ARM (aarch64):
+    <a href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-linux-aarch64.AppImage">AppImage</a>,
+    <a href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-linux-aarch64.deb">.deb</a>,
+    <a href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-linux-aarch64.rpm">.rpm</a>,
+    <a href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-linux-aarch64.flatpak">.flatpak</a>,
+    <a href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-linux-aarch64.tar.gz">.tar.gz</a>.
+    RISC-V:
+    <a href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-linux-riscv64.tar.gz">.tar.gz</a>.</p>
+  </div>
+
+  <div class="card">
+    <h3>FreeBSD 14</h3>
+    <a class="btn btn-primary" href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/livipen-0.16.0-freebsd-x86_64.tar.gz">Download for FreeBSD, x86_64</a><span class="size">129 MB</span>
+  </div>
+
+  <div class="warn" role="note">
+    <p><strong>Not code-signed yet.</strong> Until Livi Pen has signing certificates, Windows and macOS warn the
+    first time you open it. That is expected for unsigned programs; the steps below show how to continue. Check
+    the checksum first if you want to be sure the file is intact.</p>
+  </div>
+
+  <h2>How to install</h2>
+  <h3>Windows</h3>
+  <ol>
+    <li>Download the <code>.msi</code> file and double-click it.</li>
+    <li>If SmartScreen says "Windows protected your PC", choose <strong>More info</strong>, then <strong>Run anyway</strong>. Answer Yes to the administrator prompt.</li>
+    <li>Follow the wizard, then start Livi Pen from the Start menu.</li>
+  </ol>
+  <p>To remove it: Settings ▸ Apps ▸ Installed apps ▸ Livi Pen ▸ Uninstall. With the portable zip, extract it to a
+  folder you own (not inside the zip), run <code>livipen.exe</code>, and delete the folder to remove it.</p>
+
+  <h3>macOS</h3>
+  <ol>
+    <li>Open the <code>.dmg</code> and drag Livi Pen onto Applications.</li>
+    <li>Open Livi Pen from Applications. macOS says it can't check the app; close that message.</li>
+    <li>Go to <strong>System Settings ▸ Privacy &amp; Security</strong>, scroll down and choose <strong>Open Anyway</strong> next to the Livi Pen message, then confirm. You only do this once.</li>
+  </ol>
+
+  <h3>Linux</h3>
+  <pre>chmod +x livipen-0.16.0-linux-x86_64.AppImage
+./livipen-0.16.0-linux-x86_64.AppImage</pre>
+  <p>Or install a package: <code>sudo apt install ./livipen-0.16.0-linux-x86_64.deb</code>,
+  <code>sudo dnf install ./livipen-0.16.0-linux-x86_64.rpm</code>, or
+  <code>flatpak install --user livipen-0.16.0-linux-x86_64.flatpak</code>.</p>
+
+  <h2>Check your download</h2>
+  <p>On Windows, in PowerShell, in the folder you downloaded to:</p>
+  <pre>Get-FileHash .\livipen-0.16.0-windows-x64.msi -Algorithm SHA256</pre>
+  <p>On macOS or Linux: <code>shasum -a 256 FILE</code>. The result must match the SHA-256 below. If it doesn't,
+  delete the file and download it again.</p>
+  <table>
+    <tr><th>File</th><th>SHA-256</th></tr>
+    <tr><td>livipen-0.16.0-windows-x64.msi</td><td>69b69920429899c5f022b80f8c7ce46e7b1380ad55d1413e7ded7da8e662b130</td></tr>
+    <tr><td>livipen-0.16.0-windows-x64-portable.zip</td><td>41469842837ad672223c718eb9da81865c634fd64b9bd474bcdce7dbed76784e</td></tr>
+    <tr><td>livipen-0.16.0-windows-arm64.msi</td><td>43fe9bd25901caf18f2709414ec6e7a5d094568f7f0c1706103950ee3576aa03</td></tr>
+    <tr><td>livipen-0.16.0-windows-arm64-portable.zip</td><td>3a1b20312184f0a317358a16f13b053553c482550434da612ccbf8e37d13a9d0</td></tr>
+    <tr><td>livipen-0.16.0-windows-x86.msi</td><td>f8284a6a7fdddd1fe3ac92517588909c618a1d4e519b357ce29063b62054765f</td></tr>
+    <tr><td>livipen-0.16.0-windows-x86-portable.zip</td><td>58951de3c42ba273a63e2c1ed4a0f696c50f02b4d9592bdfaf9da8485611f7ad</td></tr>
+    <tr><td>livipen-0.16.0-macos-universal.dmg</td><td>f85e8a5316e770458c6e944c62467d7348ca357fcc5f37bd21973f2e0377065e</td></tr>
+    <tr><td>livipen-0.16.0-linux-x86_64.AppImage</td><td>04fd47d573757526b18304b51f0f0f23614229a6887c44f57cb44ef826ebd6de</td></tr>
+    <tr><td>livipen-0.16.0-linux-x86_64.deb</td><td>ac2914c92065b10b5280cc35f068a7be887ff155313aed4b6d9b2a249d7f6aeb</td></tr>
+    <tr><td>livipen-0.16.0-linux-x86_64.rpm</td><td>93e55dc3aca552bcdbdd22d2858f163ea976da83cc388a1b986221319a93a269</td></tr>
+    <tr><td>livipen-0.16.0-linux-x86_64.flatpak</td><td>0b72380d7af44227c987933456d3a44a6f47789fd9836e64d58e8d0e3ddb7c1c</td></tr>
+    <tr><td>livipen-0.16.0-freebsd-x86_64.tar.gz</td><td>3e3d9cbd60d757131da8ee7d3cc0adffdebbf355ebd81a7e137217e17aece7df</td></tr>
+  </table>
+  <p>Every file, including the ARM Linux, RISC-V, command-line and web builds, is listed in
+  <a href="https://github.com/sarayunova/livi-vector/releases/download/v0.16.0/SHA256SUMS.txt">SHA256SUMS.txt</a>.
+  All downloads: <a href="https://github.com/sarayunova/livi-vector/releases/tag/v0.16.0">release page</a>.</p>
+
+  <h2>Source, licence and help</h2>
+  <ul>
+    <li>Source code and releases: <a href="https://github.com/sarayunova/livi-vector">github.com/sarayunova/livi-vector</a></li>
+    <li>Report a problem: <a href="https://github.com/sarayunova/livi-vector/issues">GitHub issues</a></li>
+    <li>Licence: MIT or Apache-2.0, at your option.</li>
+    <li>Opens VectorCraft (<code>.vectorcraft</code>) and DrawCraft (<code>.drawcraft</code>) files.</li>
+  </ul>
+
+  <footer class="pf-credit">
+    <p>Livi Pen is published by LiVi Software Company. It is based on
+    <a href="https://github.com/storytold/vectorcraft">VectorCraft</a> by the ArtCraft Team and the VectorCraft contributors, used under the MIT or Apache-2.0 licence.
+    Livi Pen is not affiliated with or endorsed by them or by Adobe.</p>
+  </footer>
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo-crop">
+      <img src="../logo.png" alt="LiVi Software logo" class="footer-logo">
+    </div>
+    <p>&copy; 2026 LiVi Software</p>
+    <div class="footer-links">
+      <a href="../#featured">Products</a>
+      <a href="../#books">Books</a>
+      <a href="../#why">Why LiVi</a>
+      <a href="../#philosophy">Philosophy</a>
+    </div>
+  </div>
+</footer>
+<script>
+  var b=document.getElementById('navToggle'),n=document.getElementById('navLinks');
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o));});
+</script>
+</body>
+</html>
