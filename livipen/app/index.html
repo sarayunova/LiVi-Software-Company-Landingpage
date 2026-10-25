@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Livi Pen">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="theme-color" content="#262626">
+  <title>Livi Pen</title>
+  
+<script type="module">
+import init, * as bindings from './livipen-web-69b558f2b0f35d68.js';
+const wasm = await init({ module_or_path: './livipen-web-69b558f2b0f35d68_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+  <style>
+    /* iPad: no page scroll, bounce, pinch zoom, text selection or callout; the app takes the gestures. */
+    html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #262626;
+      overscroll-behavior: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent; -webkit-text-size-adjust: 100%; }
+    /* Inside the safe areas (notch, home indicator) of a full-screen app. */
+    #livipen_canvas { position: absolute; top: env(safe-area-inset-top, 0); right: env(safe-area-inset-right, 0);
+      bottom: env(safe-area-inset-bottom, 0); left: env(safe-area-inset-left, 0);
+      width: calc(100% - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+      height: calc(100% - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+      display: block; touch-action: none; }
+    #livipen_loading { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: #b8b8b8; font: 14px system-ui, sans-serif; pointer-events: none; }
+  </style>
+<link rel="modulepreload" href="./livipen-web-69b558f2b0f35d68.js" crossorigin="anonymous" integrity="sha384-uHzu+75szGv0gh054gy+2sQP1ZOhSc6T/bC0YtsQpGBE7q2uyKZTSrfisCGQjna2"><link rel="preload" href="./livipen-web-69b558f2b0f35d68_bg.wasm" crossorigin="anonymous" integrity="sha384-ZHRxYEJmIvx5PaAfpaLICfTvpDIjNnngcbAw/TqtmoHl8FRFh7R3voKCxATGRsLi" as="fetch" type="application/wasm"></head>
+<body>
+  <canvas id="livipen_canvas"></canvas>
+  <div id="livipen_loading">Loading Livi Pen&hellip;</div>
+</body>
+</html>
