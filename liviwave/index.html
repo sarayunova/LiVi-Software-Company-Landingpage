@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LiVi Wave: open-source audio workstation for Windows</title>
+<meta name="description" content="LiVi Wave is a free, open-source digital audio workstation for Windows: multitrack recording, editing and mixing, plugins, MIDI, automation, video and surround.">
+<link rel="icon" type="image/png" href="../logo.png">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .pf { max-width: 820px; margin: 0 auto; padding: 56px 20px 72px; }
+  .pf-head { display: flex; gap: 20px; align-items: center; margin-bottom: 20px; }
+  .pf-head img { width: 84px; height: 84px; border-radius: 20px; }
+  .pf h1 { font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.15; }
+  .pf .tag { color: var(--text-soft); margin: 6px 0 0; }
+  .pf h2 { font-size: 1.5rem; margin: 48px 0 14px; }
+  .pf h3 { font-size: 1.1rem; margin: 22px 0 6px; }
+  .pf p, .pf li { color: var(--text-soft); line-height: 1.7; }
+  .pf a:not(.btn) { color: var(--lime); text-decoration: underline; }
+  .pf strong { color: var(--ink); }
+  .pf .card { background: var(--bg-panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; margin: 16px 0; }
+  .pf .card h3 { margin: 0 0 4px; color: var(--ink); }
+  .pf .card p { margin: 4px 0 16px; }
+  .pf .size { color: var(--text-soft); font-size: .9rem; margin-left: 12px; }
+  .pf .row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 10px 0; }
+  .pf .row .arch { min-width: 150px; color: var(--ink); }
+  .pf .warn { background: var(--bg-panel-alt); border: 1px solid var(--lime-deep); border-radius: var(--radius); padding: 16px 22px; margin: 24px 0; }
+  .pf .warn p { margin: 4px 0; }
+  .pf code, .pf pre { background: var(--bg-panel-alt); color: var(--ink); border-radius: 8px; font: .9rem/1.5 ui-monospace, Consolas, monospace; }
+  .pf code { padding: 1px 6px; word-break: break-all; }
+  .pf pre { padding: 12px 16px; overflow-x: auto; margin: 10px 0; }
+  .pf ol, .pf ul { padding-left: 1.3rem; }
+  .pf table { border-collapse: collapse; width: 100%; font-size: .85rem; }
+  .pf td, .pf th { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--text-soft); }
+  .pf th { color: var(--ink); }
+  .pf td:last-child { word-break: break-all; font-family: ui-monospace, Consolas, monospace; }
+  .pf-credit { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line); font-size: .9rem; }
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="../" class="brand">
+      <div class="brand-logo-crop">
+        <img src="../logo.png" alt="LiVi Software logo" class="brand-logo">
+      </div>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="../#why">Why LiVi</a>
+      <a href="../#featured">Products</a>
+      <a href="../#services">What we build</a>
+      <a href="../#books">Books</a>
+      <a href="../#philosophy">Philosophy</a>
+      <a href="../#contact" class="btn btn-primary">Let's talk</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header><main class="pf">
+  <div class="pf-head">
+    <img src="../liviwave-icon.png" alt="LiVi Wave icon" width="72" height="72">
+    <div>
+      <h1>LiVi Wave</h1>
+      <p class="tag">Free, open-source audio workstation for Windows. Version 0.14.0 (pre-alpha)</p>
+    </div>
+  </div>
+
+  <p>Record, edit and mix audio on your own computer. LiVi Wave is a digital audio workstation (DAW) written in
+  pure Rust, with an Edit window for arranging and a Mix window for balancing, and the workflow audio engineers
+  already know. No account, no subscription, and no internet connection needed to work.</p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li><strong>Editing:</strong> Shuffle, Slip, Spot and Grid modes, Smart, Trim and Grabber tools, fades and crossfades, playlists with comping lanes, clip gain, and undo for everything.</li>
+    <li><strong>Mixing:</strong> ten inserts and ten sends per track, busses, aux inputs, VCAs, solo modes, meters, and automatic plugin delay compensation.</li>
+    <li><strong>Automation:</strong> volume, pan, mute, sends and every plugin parameter, written live in Write, Touch and Latch.</li>
+    <li><strong>Plugins:</strong> EQ, compressors, reverbs, delays, a synth, a drum synth and a sampler are built in. CLAP plugins load too.</li>
+    <li><strong>MIDI and notation:</strong> a piano-roll editor, step input, quantize, Standard MIDI Files, a Score Editor and MusicXML export.</li>
+    <li><strong>Video and surround:</strong> a picture track that follows the playhead, and surround and immersive mixing up to 9.1.6 and Ambisonics.</li>
+    <li><strong>Bounce:</strong> mix or stems to WAV, AIFF or FLAC with dither, reporting peak, true peak and loudness (LUFS).</li>
+    <li><strong>Scriptable:</strong> every action can be run from the command line with <code>liviwave-cli</code>.</li>
+  </ul>
+  <p>This is an early pre-alpha release. Expect rough edges, and keep backups of sessions you care about.</p>
+
+  <h2>Download</h2>
+  <p>For Windows 10 or 11, 64-bit.</p>
+
+  <div class="card">
+    <h3>Installer (recommended)</h3>
+    <p>An MSI installer. By default it installs for your account; the first page offers installation for everyone on the computer.</p>
+    <div class="row"><span class="arch">64-bit (x64)</span><a class="btn btn-primary btn-sm" href="https://github.com/sarayunova/liviwave/releases/download/v0.14.0-liviwave.1/liviwave-0.14.0-windows-x64.msi">Download</a><span class="size">14.9 MB</span></div>
+  </div>
+
+  <div class="card">
+    <h3>Portable</h3>
+    <p>No installation: unzip it and run <code>liviwave.exe</code>. The zip also holds <code>liviwave-cli.exe</code> for the command line. Download each new version from this page.</p>
+    <div class="row"><span class="arch">64-bit (x64)</span><a class="btn btn-primary btn-sm" href="https://github.com/sarayunova/liviwave/releases/download/v0.14.0-liviwave.1/liviwave-0.14.0-windows-x64-portable.zip">Download</a><span class="size">18.9 MB</span></div>
+  </div>
+
+  <div class="warn" role="note">
+    <p><strong>Not code-signed yet.</strong> Windows SmartScreen will show "Windows protected your PC" the first time
+    you run these files. That is expected for unsigned programs. Check the checksum below, then choose
+    <strong>More info</strong>, then <strong>Run anyway</strong>.</p>
+  </div>
+
+  <h2>How to install</h2>
+  <h3>With the installer</h3>
+  <ol>
+    <li>Download the MSI and check its checksum (below).</li>
+    <li>Double-click it. If SmartScreen appears, choose <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+    <li>Follow the wizard, then start LiVi Wave from the Start menu. The built-in demo song is a good first session to open.</li>
+  </ol>
+  <p>To remove it: Settings &#9656; Apps &#9656; Installed apps &#9656; LiVi Wave &#9656; Uninstall. Your sessions are kept.</p>
+
+  <h3>With the portable version</h3>
+  <ol>
+    <li>Unzip it into a folder you own, such as <code>C:\Tools\LiVi Wave</code>.</li>
+    <li>Run <code>liviwave.exe</code>. If SmartScreen appears, choose <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+  </ol>
+
+  <h2>Your data</h2>
+  <p>Your sessions and audio are saved on your computer, where you choose. LiVi Wave does not need an account.</p>
+
+  <h2>Check your download</h2>
+  <p>In PowerShell, in the folder you downloaded to:</p>
+  <pre>Get-FileHash .\liviwave-0.14.0-windows-x64.msi -Algorithm SHA256</pre>
+  <p>The result must match the SHA-256 below. If it doesn't, delete the file and download it again.</p>
+  <table>
+    <tr><th>File</th><th>SHA-256</th></tr>
+    <tr><td>liviwave-0.14.0-windows-x64.msi</td><td>9dcaafa280155fa1f8d3eb9f8be1216efdcc5050923e7920f7c5276536f5f7e0</td></tr>
+    <tr><td>liviwave-0.14.0-windows-x64-portable.zip</td><td>0690f77be6b71171ed785ea6585c487cf37074bbbede1bdf5523b5cc0f498122</td></tr>
+  </table>
+
+  <h2>Source, licence and help</h2>
+  <ul>
+    <li>Source code and releases: <a href="https://github.com/sarayunova/liviwave">github.com/sarayunova/liviwave</a></li>
+    <li>Report a problem: <a href="https://github.com/sarayunova/liviwave/issues">GitHub issues</a>, or email <a href="mailto:contact@liviverse.com">contact@liviverse.com</a></li>
+    <li>Licence: MIT or Apache-2.0, at your option.</li>
+    <li>Not in this release: Windows x86 and Arm builds, macOS and Linux packages.</li>
+  </ul>
+
+  <footer class="pf-credit">
+    <p>LiVi Wave is based on <a href="https://github.com/storytold/soundcraft">SoundCraft</a> by the ArtCraft team,
+    used under the MIT or Apache-2.0 licence. LiVi Wave is not affiliated with or endorsed by the ArtCraft team.</p>
+  </footer>
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo-crop">
+      <img src="../logo.png" alt="LiVi Software logo" class="footer-logo">
+    </div>
+    <p>&copy; 2026 LiVi Software</p>
+    <div class="footer-links">
+      <a href="../#featured">Products</a>
+      <a href="../#books">Books</a>
+      <a href="../#why">Why LiVi</a>
+      <a href="../#philosophy">Philosophy</a>
+    </div>
+  </div>
+</footer>
+<script>
+  var b=document.getElementById('navToggle'),n=document.getElementById('navLinks');
+  b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o));});
+</script>
+</body>
+</html>
